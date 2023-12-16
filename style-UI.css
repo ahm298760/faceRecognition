@@ -1,0 +1,146 @@
+:root {
+    --color: #009f00;
+    --color-hor: #00cf00;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.app-them {
+    border: 3px solid white;
+    outline: 5px solid var(--color);
+    color: white;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+img.app-them {
+    border-radius: 50%;
+}
+
+.content {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content > div {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.but {
+    padding: 20px 30px;
+    cursor: pointer;
+    background-color: var(--color);
+    transition: 200ms;
+    width: 300px;
+    outline: none;
+}
+.but:hover {
+    background-color: var(--color-hor);
+    outline: 5px solid var(--color-hor);
+}
+.but:active {
+    background-color: var(--color-hor);
+    outline: 5px solid var(--color-hor);
+}
+
+.active {
+    background-color: var(--color-hor);
+    outline: 5px solid var(--color-hor);
+}
+#personsList {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+   /* height: 100%;*/
+    height: 0;
+    background: #fff;
+    transition: 500ms;
+    overflow: auto;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 15px;
+}
+/*
+.list:hover {
+    background-color: #c1c1c1;
+}
+*/
+.list > img {
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+}
+ #close-but {
+    background: none;
+    border: none;
+    font-size: 40px;
+    padding: 5px 20px;
+    cursor: pointer;
+ }
+
+ #video {
+     width: 300px;
+     height: 300px;
+     border-radius: 50%;
+     background-color: #000;
+     display: none;
+ }
+
+ #loading {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#loading-icon {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+#loading-icon > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    opacity: 0.1;
+    animation: loading 1200ms linear infinite;
+}
+
+#loading-icon > div::after {
+    content: '';
+    width: 10px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    8.3% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}

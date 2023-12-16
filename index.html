@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+    <link rel="stylesheet" href="style-UI.css">
+    <script defer src="face-api.min.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <h1 id="showPersons" style="padding: 15px; cursor: pointer;">Persons</h1>
+    <div class="content">
+        <div id="screen">
+            <video src="" class="app-them" width="300" height="300" id="video" autoplay></video>
+        </div>
+        <div>
+            <button class="app-them but" id="usingCam">using cam</button>
+        </div>
+        <div>
+            <button class="app-them but" id="glasse-cam">Connect With Glasse</button>
+        </div>
+    </div>
+    <div id="personsList">
+        <div style="display: flex; justify-content: flex-end;">
+            <button id="close-but" onclick="closePersonsList()">x</button>
+        </div>
+    </div>
+    <div id="loading">
+        <div id="loading-icon"></div>
+    </div>
+</body>
+</html>
+<Script src="data/data.js"></Script>
+
