@@ -88,6 +88,15 @@ img.app-them {
     padding: 5px 20px;
     cursor: pointer;
  }
+#screen {
+    position: relative;
+}
+
+#screen > canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
  #video {
      width: 300px;
